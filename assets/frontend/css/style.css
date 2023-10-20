@@ -10537,3 +10537,16 @@ input[type=checkbox], input[type=radio] {
     min-height: 100px;
 }
 
+/*# Added Styles*/
+.address_name.wrapper{
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.main-address.wrapper{
+    background-color:lightgray ;
+}
+.wrapper .clcik-to-copy-address{
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: #c4eac4;
+}

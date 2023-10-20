@@ -42,22 +42,27 @@
                         <x-msg.error/>
                         <x-msg.success/>
 
-                        <form action="{{route('frontend.donations.log.store')}}" method="post" enctype="multipart/form-data" class="donation-form-wrapper">
-                         @csrf
+                        <form action="{{route('frontend.donations.log.store')}}" method="post"
+                              enctype="multipart/form-data" class="donation-form-wrapper">
+                            @csrf
                             <input type="hidden" name="cid" value="">
                             <input type="hidden" name="cause_id" value="{{$donation->id}}">
                             <div class="tab_section mb-4">
                                 <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                         <input type="hidden" name="payment_type" class="payment_type" value="once">
-                                        <a class="nav-link active once_tab" id="nav-home-tab" data-toggle="tab" href="#one_time_donation_tab" role="tab" aria-controls="nav-home" aria-selected="true">{{__('Once')}}</a>
-                                        <a class="nav-link ml-2 monthly_tab" id="nav-profile-tab" data-toggle="tab" href="#monthly_donation_tab" role="tab" aria-controls="nav-profile" aria-selected="false">{{__('Monthly')}}</a>
+                                        <a class="nav-link active once_tab" id="nav-home-tab" data-toggle="tab"
+                                           href="#one_time_donation_tab" role="tab" aria-controls="nav-home"
+                                           aria-selected="true">{{__('Once')}}</a>
+                                        <a class="nav-link ml-2 monthly_tab" id="nav-profile-tab" data-toggle="tab"
+                                           href="#monthly_donation_tab" role="tab" aria-controls="nav-profile"
+                                           aria-selected="false">{{__('Monthly')}}</a>
                                     </div>
                                 </nav>
 
                                 <div class="tab-content" id="nav-tabContent">
                                     {{--Tab One--}}
-                                    <div class="tab-pane fade show active" id="one_time_donation_tab" role="tabpanel" >
+                                    <div class="tab-pane fade show active" id="one_time_donation_tab" role="tabpanel">
                                         <div class="single_amount_wrapper">
                                             @php
                                                 $custom_amounts_once  =  get_static_option('donation_custom_amount_once');
@@ -65,7 +70,8 @@
                                                 $minimum_donation_amount = get_static_option('minimum_donation_amount');
                                             @endphp
                                             @foreach($custom_amounts_once as $amount)
-                                                <div class="single_amount @if($selected_amount === $amount) selected @endif" data-value="{{trim($amount)}}" >
+                                                <div class="single_amount @if($selected_amount === $amount) selected @endif"
+                                                     data-value="{{trim($amount)}}">
                                                     {{amount_with_currency_symbol($amount)}}
                                                 </div>
                                             @endforeach
@@ -75,9 +81,12 @@
                                         <div class="amount_wrapper">
                                             <div class="suffix">{{get_static_option('site_global_currency')}}</div>
 
-                                            <input type="number" name="amount" @php $default_donation_amount = trim(get_static_option('donation_default_amount')); @endphp
-                                            value="{{$selected_amount ?? $default_donation_amount}}" step="1" maxlength="6" inputmode="numeric"
-                                                   min="1" id="donation_amount_user_input" class="bg-info text-light"><br>
+                                            <input type="number" name="amount"
+                                                   @php $default_donation_amount = trim(get_static_option('donation_default_amount')); @endphp
+                                                   value="{{$selected_amount ?? $default_donation_amount}}" step="1"
+                                                   maxlength="6" inputmode="numeric"
+                                                   min="1" id="donation_amount_user_input"
+                                                   class="bg-info text-light"><br>
                                         </div>
                                     </div>
 
@@ -90,7 +99,8 @@
                                                 $minimum_donation_amount = get_static_option('minimum_donation_amount');
                                             @endphp
                                             @foreach($custom_amounts_monthly as $amount)
-                                                <div class="single_amount @if($selected_amount === $amount) selected @endif" data-value="{{trim($amount)}}" >
+                                                <div class="single_amount @if($selected_amount === $amount) selected @endif"
+                                                     data-value="{{trim($amount)}}">
                                                     {{amount_with_currency_symbol($amount)}}
                                                 </div>
                                             @endforeach
@@ -100,9 +110,12 @@
                                         <div class="amount_wrapper">
                                             <div class="suffix">{{get_static_option('site_global_currency')}}</div>
 
-                                            <input type="number" name="amount" @php $default_donation_amount = trim(get_static_option('donation_default_amount')); @endphp
-                                            value="{{$selected_amount ?? $default_donation_amount}}" step="1" maxlength="6" inputmode="numeric"
-                                                   min="1" id="donation_amount_user_input" class="bg-info text-light"><br>
+                                            <input type="number" name="amount"
+                                                   @php $default_donation_amount = trim(get_static_option('donation_default_amount')); @endphp
+                                                   value="{{$selected_amount ?? $default_donation_amount}}" step="1"
+                                                   maxlength="6" inputmode="numeric"
+                                                   min="1" id="donation_amount_user_input"
+                                                   class="bg-info text-light"><br>
                                         </div>
                                     </div>
                                 </div>
@@ -137,15 +150,36 @@
                             </div>
 
                             @if(!empty(get_static_option('allow_user_to_add_custom_tip_in_donation')))
-                                <input type="hidden" name="admin_tip" value="{{\App\Helpers\DonationHelpers::get_donation_charge($selected_amount ?? $default_donation_amount)}}">
+                                <input type="hidden" name="admin_tip"
+                                       value="{{\App\Helpers\DonationHelpers::get_donation_charge($selected_amount ?? $default_donation_amount)}}">
                             @endif
 
                             {!! render_payment_gateway_for_form() !!}
                             @if(!empty(get_static_option('manual_payment_gateway')))
                                 <div class="form-group manual_payment_transaction_field">
-                                    <div class="label">{{__('Attach Your Bank Document')}}</div>
-                                    <input class="form-control btn btn-warning btn-sm" type="file" name="manual_payment_attachment">
-                                    <span class="help-info">{!! get_manual_payment_description() !!}</span>
+                                    {{--                                    <div class="label">{{__('Attach Your Bank Document')}}</div>--}}
+                                    <div class="label">{{__('Attach Screenshot Of Your Payment')}}</div>
+                                    <input class="form-control btn btn-warning btn-sm" type="file"
+                                           name="manual_payment_attachment">
+                                    {{--  <span class="help-info">{!! get_manual_payment_description() !!}</span>--}}
+                                    <div class="wallet-address-field">
+                                        <div class="row">
+                                            <div class="col-sm-3 pr-0 mr-0">
+                                                <div class="wrapper address_name px-3 py-2 bg-dark text-muted text-center">Bitcoin
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-7 mx-0 px-0">
+                                                <div class="wrapper px-3 py-2 text-dark main-address ">
+                                                    bc1qxmwfkmq4r2qq2hzw9j0vwgd04ekh7vm3d8knwa
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <div class="wrapper">
+                                                    <div class="clcik-to-copy-address text-success text-center">copy</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             @endif
                             <div class="donate-seperate-page-button">
@@ -185,14 +219,18 @@
                                     <span>{{get_static_option('site_title')}} {{__('tip')}}</span>
                                     <span class="price admin_tip">
                                         @if(!empty(get_static_option('allow_user_to_add_custom_tip_in_donation')))
-                                        <span class="input-wrap"><input type="number" name="custom_admin_tip" min="1" value="{{\App\Helpers\DonationHelpers::get_donation_charge($selected_amount ?? $default_donation_amount)}}"></span>
+                                            <span class="input-wrap"><input type="number" name="custom_admin_tip"
+                                                                            min="1"
+                                                                            value="{{\App\Helpers\DonationHelpers::get_donation_charge($selected_amount ?? $default_donation_amount)}}"></span>
                                         @else
-                                       <span class="amount"> {{\App\Helpers\DonationHelpers::get_donation_charge($selected_amount ?? $default_donation_amount,true)}}</span>
+                                            <span class="amount"> {{\App\Helpers\DonationHelpers::get_donation_charge($selected_amount ?? $default_donation_amount,true)}}</span>
                                         @endif
                                     </span>
                                 </li>
                             @endif
-                            <li class="total"><span>{{__('Total')}}</span> <span class="price total_amount">{{\App\Helpers\DonationHelpers::get_donation_total($selected_amount ?? $default_donation_amount,true) }}</span></li>
+                            <li class="total"><span>{{__('Total')}}</span> <span
+                                        class="price total_amount">{{\App\Helpers\DonationHelpers::get_donation_total($selected_amount ?? $default_donation_amount,true) }}</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -214,15 +252,15 @@
             $(document).ready(function () {
 
                 //Sohan Custom Js
-                $(document).on('click','.once_tab',function(){
+                $(document).on('click', '.once_tab', function () {
                     $('.payment_type').val('once')
                 })
 
-                $(document).on('click','.monthly_tab',function(){
+                $(document).on('click', '.monthly_tab', function () {
                     $('.payment_type').val('monthly')
                 })
 
-                function updateDonationAmount(){
+                function updateDonationAmount() {
                     var donation_amount_user_input = $('#donation_amount_user_input').val();
                     var admin_tip = $('input[name="admin_tip"]').val();
 
@@ -243,18 +281,19 @@
                         }
                     });
                 }
+
                 //Donation Charge
                 $(document).on('keyup change', 'input[name="custom_admin_tip"]', function () {
                     var el = $(this);
-                   calcCustomTip(el);
+                    calcCustomTip(el);
                 });
 
-                function calcCustomTip(el){
+                function calcCustomTip(el) {
                     var currentVal = el.val();
                     var changeVal;
-                    if(currentVal > 0){
+                    if (currentVal > 0) {
                         changeVal = currentVal
-                    }else{
+                    } else {
                         el.val(1);
                         changeVal = 1
                     }
