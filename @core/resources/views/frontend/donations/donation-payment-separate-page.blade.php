@@ -165,15 +165,34 @@
                                     <div class="wallet-address-field py-4">
                                         <!-- Address Section 1 -->
                                         <div class="row mb-3">
-                                            <div class="col-3 pr-0 mr-0">
+{{--                                            big screen--}}
+                                            <div class="col-sm-3 d-none d-lg-block d-xl-block d-md-block pr-0 mr-0">
                                                 <div class="wrapper address_name px-3 py-2 bg-dark text-muted text-center">Bitcoin</div>
                                             </div>
-                                            <div class="col-7 mx-0 px-0">
+{{--                                            mobile screen--}}
+                                            <div class="col-4 d-none d-sm-block pr-0 mr-0">
+                                                <div class="wrapper address_name px-3 py-2 bg-dark text-muted text-center">Bitcoin</div>
+                                            </div>
+{{--                                            big screen--}}
+                                            <div class="col-sm-7 d-none d-lg-block d-xl-block d-md-block mx-0 px-0">
                                                 <div id="btc-address-1" class="wrapper px-3 py-2 text-dark main-address w-100">
                                                     bc1qxmwfkmq4r2qq2hzw9j0vwgd04ekh7vm3d8knwa
                                                 </div>
                                             </div>
-                                            <div class="col-2 pl-0 ml-0">
+{{--                                            mobile screen--}}
+                                            <div class="col-4 d-none d-sm-block mx-0 px-0">
+                                                <div id="btc-address-1" class="wrapper px-3 py-2 text-dark main-address w-100">
+                                                    bc1qxmwfkmq4r2qq2hzw9j0vwgd04ekh7vm3d8knwa
+                                                </div>
+                                            </div>
+{{--                                            big screen--}}
+                                            <div class="col-sm-2 d-none d-lg-block d-xl-block d-md-block pl-0 ml-0">
+                                                <div class="wrapper">
+                                                    <div id="copy-btc" class="click-to-copy-address text-success text-center px-3 cursor-pointer py-2">copy</div>
+                                                </div>
+                                            </div>
+{{--                                            mobile screen--}}
+                                            <div class="col-4 d-none d-sm-block pl-0 ml-0">
                                                 <div class="wrapper">
                                                     <div id="copy-btc" class="click-to-copy-address text-success text-center px-3 cursor-pointer py-2">copy</div>
                                                 </div>
