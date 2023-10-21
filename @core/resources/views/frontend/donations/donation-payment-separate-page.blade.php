@@ -156,7 +156,7 @@
 
                             {!! render_payment_gateway_for_form() !!}
                             @if(!empty(get_static_option('manual_payment_gateway')))
-                                <div class="form-group manual_payment_transaction_field">
+                                <div class="form-group manual_payment_transaction_field show">
                                     {{--                                    <div class="label">{{__('Attach Your Bank Document')}}</div>--}}
                                     <div class="label">{{__('Attach Screenshot Of Your Payment')}}</div>
                                     <input class="form-control btn btn-warning btn-sm" type="file"
