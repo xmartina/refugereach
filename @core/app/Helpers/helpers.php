@@ -553,7 +553,7 @@ function render_payment_gateway_select()
     foreach ($all_gateway as $gateway){
         $selected = (get_static_option('site_default_payment_gateway') == $gateway) ? 'selected' : '';
         if (!empty(get_static_option($gateway . '_gateway'))) :
-            $output .= '<option value="'.$gateway.'" '.$selected.'>'.ucfirst(str_replace('_',' ',$gateway)).'</option>';
+            $output .= '<span class="select_payment_text text-muted">select a payment method </span><option value="'.$gateway.'" '.$selected.'>'.ucfirst(str_replace('_',' ',$gateway)).'</option>';
         endif;
     }
     return $output;

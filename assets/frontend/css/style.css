@@ -10563,3 +10563,6 @@ html .navbar-area.nav-style-02 .nav-container .logo-wrapper {
 .cursor-pointer{
     cursor:pointer;
 }
+.select_payment_text{
+    font-size: 16px;
+}
