@@ -10554,7 +10554,7 @@ html .wrapper .click-to-copy-address:hover{
     color: #faf9f9 !important;
     font-weight: bold;
     background-color: #49ec49;
-    transition: all 450ms linear;
+    transition: all 650ms ease-in-out;
 }
 html .navbar-area.nav-style-02 .nav-container .logo-wrapper {
     max-width: 250px;
