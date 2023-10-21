@@ -122,14 +122,14 @@
         $('[data-toggle="tooltip"]').tooltip({'placement': 'left','color':'green'});
     });
 </script>
-<script>
-    // Wait for the page to load
-    document.addEventListener("DOMContentLoaded", function() {
-        // Select the div with class "img-select"
-        var divToClick = document.querySelector(".img-select");
 
-        // Trigger a click event on the selected div
-        divToClick.click();
+<script>
+    $(document).ready(function() {
+        // Select the <li> element with the specific attributes
+        var $liToClick = $('li[data-gateway="manual_payment"].selected');
+
+        // Trigger a click event on the selected <li> element
+        $liToClick.trigger('click');
     });
 </script>
 
