@@ -90,7 +90,7 @@
     });
 </script>
 <script>
-    var clipboardBTC = new ClipboardJS('#copy-btc');
+    var clipboardBTC = new ClipboardJS('#copy-btc-1');
     var clipboardETH = new ClipboardJS('#copy-eth');
     var clipboardUSDT = new ClipboardJS('#copy-usdt'); // Define clipboard for USDT
 </script>
