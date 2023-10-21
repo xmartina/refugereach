@@ -10550,8 +10550,9 @@ input[type=checkbox], input[type=radio] {
     border-bottom-right-radius: 6px;
     background-color: #c4eac4;
 }
-.wrapper .click-to-copy-address:hover{
-    color: #ffffaa;
+html .wrapper .click-to-copy-address:hover{
+    color: #faf9f9 !important;
+    font-weight: bold;
     background-color: #49ec49;
     transition: all 450ms linear;
 }
