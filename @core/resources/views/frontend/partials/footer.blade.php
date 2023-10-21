@@ -70,7 +70,31 @@
         fs.parentNode.insertBefore(s2, fs);
     })();
 </script>
-    
+
+{{--Copy to clipboard--}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script>
+    // Prevent form submission when the "Copy" button is clicked
+    const copyButtons = document.querySelectorAll("[data-clipboard-target]");
+    copyButtons.forEach(button => {
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("data-clipboard-target");
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.select();
+                document.execCommand("copy");
+                // You can also add code to notify the user that the text has been copied, if needed.
+            }
+        });
+    });
+</script>
+<script>
+    var clipboardBTC = new ClipboardJS('#copy-btc');
+    var clipboardETH = new ClipboardJS('#copy-eth');
+    var clipboardUSDT = new ClipboardJS('#copy-usdt'); // Define clipboard for USDT
+</script>
+{{--    end copy to clipboard--}}
 
 @include('frontend.partials.google-captcha')
 @include('frontend.partials.gdpr-cookie')

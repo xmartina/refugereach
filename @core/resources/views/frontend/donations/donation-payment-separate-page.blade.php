@@ -169,13 +169,13 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-7 mx-0 px-0">
-                                                <div class="wrapper px-3 py-2 text-dark main-address w-100">
+                                                <div id="btc-address-1" class="wrapper px-3 py-2 text-dark main-address w-100">
                                                     bc1qxmwfkmq4r2qq2hzw9j0vwgd04ekh7vm3d8knwa
                                                 </div>
                                             </div>
                                             <div class="col-sm-2 pl-0 ml-0">
                                                 <div class="wrapper">
-                                                    <div class="clcik-to-copy-address text-success text-center px-3 cursor-pointer py-2">copy</div>
+                                                    <div data-clipboard-target="#btc-address" class="clcik-to-copy-address text-success text-center px-3 cursor-pointer py-2">copy</div>
                                                 </div>
                                             </div>
                                         </div>
