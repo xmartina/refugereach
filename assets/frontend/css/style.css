@@ -10544,6 +10544,7 @@ input[type=checkbox], input[type=radio] {
 }
 .main-address.wrapper{
     background-color:lightgray ;
+    overflow: hidden;
 }
 .wrapper .click-to-copy-address{
     border-top-right-radius: 6px;
