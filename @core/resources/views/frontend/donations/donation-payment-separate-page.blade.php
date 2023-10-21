@@ -175,7 +175,7 @@
                                             </div>
                                             <div class="col-sm-2 pl-0 ml-0">
                                                 <div class="wrapper">
-                                                    <div class="clcik-to-copy-address text-success text-center px-3 py-2">copy</div>
+                                                    <div class="clcik-to-copy-address text-success text-center px-3 cursor-pointer py-2">copy</div>
                                                 </div>
                                             </div>
                                         </div>

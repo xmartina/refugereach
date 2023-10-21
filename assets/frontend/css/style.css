@@ -10550,6 +10550,14 @@ input[type=checkbox], input[type=radio] {
     border-bottom-right-radius: 6px;
     background-color: #c4eac4;
 }
+.wrapper .clcik-to-copy-address:hover{
+    color: #ffffaa;
+    background-color: #49ec49;
+    transition: all 450ms linear;
+}
 html .navbar-area.nav-style-02 .nav-container .logo-wrapper {
     max-width: 250px;
+}
+.cursor-pointer{
+    cursor:pointer;
 }
