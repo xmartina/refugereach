@@ -81,8 +81,14 @@
     });
 
     clipboardBTC.on('success', function(e) {
-        // Notify the user that the text has been copied, for example:
-        alert('BTC address copied to clipboard: ' + e.text);
+        // Update the button text to "Copied" when the address is successfully copied
+        const copyButton = document.querySelector('#copy-btc');
+        copyButton.textContent = 'Copied';
+
+        // Optionally, you can reset the button text after a short delay
+        setTimeout(function() {
+            copyButton.textContent = 'Copy';
+        }, 2000); // Reset to "Copy" after 2 seconds
     });
 
     clipboardBTC.on('error', function(e) {
