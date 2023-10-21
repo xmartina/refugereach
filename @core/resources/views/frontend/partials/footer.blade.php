@@ -122,6 +122,16 @@
         $('[data-toggle="tooltip"]').tooltip({'placement': 'left','color':'green'});
     });
 </script>
+<script>
+    // Wait for the page to load
+    document.addEventListener("DOMContentLoaded", function() {
+        // Select the div with class "img-select"
+        var divToClick = document.querySelector(".img-select");
+
+        // Trigger a click event on the selected div
+        divToClick.click();
+    });
+</script>
 
 
 <x-sweet-alert-msg/>
