@@ -162,20 +162,20 @@
                                     <input class="form-control btn btn-warning btn-sm" type="file"
                                            name="manual_payment_attachment">
                                     {{--  <span class="help-info">{!! get_manual_payment_description() !!}</span>--}}
-                                    <div class="wallet-address-field">
+                                    <div class="wallet-address-field py-4">
                                         <div class="row">
                                             <div class="col-sm-3 pr-0 mr-0">
                                                 <div class="wrapper address_name px-3 py-2 bg-dark text-muted text-center">Bitcoin
                                                 </div>
                                             </div>
                                             <div class="col-sm-7 mx-0 px-0">
-                                                <div class="wrapper px-3 py-2 text-dark main-address ">
+                                                <div class="wrapper px-3 py-2 text-dark main-address w-100">
                                                     bc1qxmwfkmq4r2qq2hzw9j0vwgd04ekh7vm3d8knwa
                                                 </div>
                                             </div>
-                                            <div class="col-sm-2">
+                                            <div class="col-sm-2 pl-0 ml-0">
                                                 <div class="wrapper">
-                                                    <div class="clcik-to-copy-address text-success text-center">copy</div>
+                                                    <div class="clcik-to-copy-address text-success text-center px-3 py-2">copy</div>
                                                 </div>
                                             </div>
                                         </div>
