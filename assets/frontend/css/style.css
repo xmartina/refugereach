@@ -10545,12 +10545,12 @@ input[type=checkbox], input[type=radio] {
 .main-address.wrapper{
     background-color:lightgray ;
 }
-.wrapper .clcik-to-copy-address{
+.wrapper .click-to-copy-address{
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
     background-color: #c4eac4;
 }
-.wrapper .clcik-to-copy-address:hover{
+.wrapper .click-to-copy-address:hover{
     color: #ffffaa;
     background-color: #49ec49;
     transition: all 450ms linear;
