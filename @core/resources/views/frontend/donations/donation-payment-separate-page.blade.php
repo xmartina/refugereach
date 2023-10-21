@@ -175,9 +175,10 @@
                                             </div>
                                             <div class="col-sm-2 pl-0 ml-0">
                                                 <div class="wrapper">
-                                                    <div data-clipboard-target="#btc-address" class="clcik-to-copy-address text-success text-center px-3 cursor-pointer py-2" id="copy-btc-1">copy</div>
+                                                    <div id="copy-btc" class="click-to-copy-address text-success text-center px-3 cursor-pointer py-2">copy</div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>

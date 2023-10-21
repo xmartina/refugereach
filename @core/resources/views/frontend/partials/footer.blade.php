@@ -74,19 +74,20 @@
 {{--Copy to clipboard--}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 <script>
-    // Prevent form submission when the "Copy" button is clicked
-    const copyButtons = document.querySelectorAll("[data-clipboard-target]");
-    copyButtons.forEach(button => {
-        button.addEventListener("click", function(event) {
-            event.preventDefault();
-            const targetId = this.getAttribute("data-clipboard-target");
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                targetElement.select();
-                document.execCommand("copy");
-                // You can also add code to notify the user that the text has been copied, if needed.
-            }
-        });
+    const clipboardBTC = new ClipboardJS('#copy-btc', {
+        text: function() {
+            return document.querySelector('#btc-address-1').innerText.trim();
+        }
+    });
+
+    clipboardBTC.on('success', function(e) {
+        // Notify the user that the text has been copied, for example:
+        alert('BTC address copied to clipboard: ' + e.text);
+    });
+
+    clipboardBTC.on('error', function(e) {
+        // Handle copy errors, if any.
+        console.error('Copy failed: ' + e.action);
     });
 </script>
 <script>
