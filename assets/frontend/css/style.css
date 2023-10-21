@@ -10550,3 +10550,6 @@ input[type=checkbox], input[type=radio] {
     border-bottom-right-radius: 6px;
     background-color: #c4eac4;
 }
+html .navbar-area.nav-style-02 .nav-container .logo-wrapper {
+    max-width: 250px;
+}
