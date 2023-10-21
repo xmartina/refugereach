@@ -74,27 +74,36 @@
 {{--Copy to clipboard--}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 <script>
-    const clipboardBTC = new ClipboardJS('#copy-btc', {
-        text: function() {
-            return document.querySelector('#btc-address-1').innerText.trim();
-        }
-    });
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script>
+    function setupClipboard(id, targetId) {
+        const clipboard = new ClipboardJS(id, {
+            text: function() {
+                return document.querySelector(targetId).innerText.trim();
+            }
+        });
 
-    clipboardBTC.on('success', function(e) {
-        // Update the button text to "Copied" when the address is successfully copied
-        const copyButton = document.querySelector('#copy-btc');
-        copyButton.textContent = 'Copied';
+        clipboard.on('success', function(e) {
+            // Update the button text to "Copied" when the address is successfully copied
+            const copyButton = document.querySelector(id);
+            copyButton.textContent = 'Copied';
 
-        // Optionally, you can reset the button text after a short delay
-        setTimeout(function() {
-            copyButton.textContent = 'Copy';
-        }, 2000); // Reset to "Copy" after 2 seconds
-    });
+            // Optionally, reset the button text after a short delay
+            setTimeout(function() {
+                copyButton.textContent = 'Copy';
+            }, 2000); // Reset to "Copy" after 2 seconds
+        });
 
-    clipboardBTC.on('error', function(e) {
-        // Handle copy errors, if any.
-        console.error('Copy failed: ' + e.action);
-    });
+        clipboard.on('error', function(e) {
+            // Handle copy errors, if any.
+            console.error('Copy failed: ' + e.action);
+        });
+    }
+
+    // Set up Clipboard for each section
+    setupClipboard('#copy-btc', '#btc-address-1');
+    setupClipboard('#copy-btc-2', '#btc-address-2');
+    setupClipboard('#copy-eth', '#eth-address');
 </script>
 <script>
     var clipboardBTC = new ClipboardJS('#copy-btc-1');
