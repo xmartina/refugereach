@@ -184,21 +184,21 @@
                                         </div>
 
                                         <!-- Address Section 2 -->
-                                        <div class="row mb-3">
-                                            <div class="col-4 pr-0 mr-0">
-                                                <div class="wrapper address_name px-3 py-2 bg-dark text-muted text-center">Bitcoin</div>
-                                            </div>
-                                            <div class="col-4 mx-0 px-0">
-                                                <div id="btc-address-2" class="wrapper px-3 py-2 text-dark main-address w-100">
-                                                    1HJvHgNd51P1ZHR2ehvTcxjB5m8t9d8vce
-                                                </div>
-                                            </div>
-                                            <div class="col-4 pl-0 ml-0">
-                                                <div class="wrapper">
-                                                    <div id="copy-btc-2" class="click-to-copy-address text-success text-center px-3 cursor-pointer py-2">copy</div>
-                                                </div>
-                                            </div>
-                                        </div>
+{{--                                        <div class="row mb-3">--}}
+{{--                                            <div class="col-4 pr-0 mr-0">--}}
+{{--                                                <div class="wrapper address_name px-3 py-2 bg-dark text-muted text-center">Bitcoin</div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="col-4 mx-0 px-0">--}}
+{{--                                                <div id="btc-address-2" class="wrapper px-3 py-2 text-dark main-address w-100">--}}
+{{--                                                    1HJvHgNd51P1ZHR2ehvTcxjB5m8t9d8vce--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="col-4 pl-0 ml-0">--}}
+{{--                                                <div class="wrapper">--}}
+{{--                                                    <div id="copy-btc-2" class="click-to-copy-address text-success text-center px-3 cursor-pointer py-2">copy</div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
 
                                         <!-- Address Section 3 -->
 {{--                                        <div class="row mb-3">--}}
